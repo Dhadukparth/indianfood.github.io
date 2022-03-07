@@ -1,0 +1,124 @@
+@media screen and (max-width: 1299px) {
+    #toggleBtn{
+        display: block;
+    }
+
+    #closeBtn{
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 60px;
+        cursor: pointer;
+    }
+
+    .banner .navbar ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: #2c3a42;
+        width: 100vw;
+        height: 100vh;
+        transition: all 1s ease;
+    }
+
+    .banner.menuActive .navbar ul{
+        left: 0;
+    }
+
+    .banner.menuActive .navbar ul li a:hover{
+        text-decoration: underline;
+    }
+
+    .banner .banner__text{
+        width: 100vw;
+    }
+
+    .banner .banner__text h2,
+    .banner .banner__text h1{
+        font-size: 60px;
+    }
+
+    .banner .banner__text button{
+        font-size: 30px;
+    }
+
+    .about__container{
+        padding: 5rem;
+        flex-direction: column-reverse;
+    }
+
+    .about__container .about__text,
+    .task__container .box{
+        width: 100%;
+        text-align: center;
+    }
+
+    .task__container .box .circle,
+    .info__container .text .circle{
+        justify-content: center;
+    }
+
+    .task__container{
+        padding: 5rem;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .info__container .text h2{
+        font-size: 20px;
+    }
+    
+    .info__container .text p{
+        font-size: 18px;
+    }
+    
+    .info__container .text .circle,
+    .info__container .text .menu{
+        padding: 1rem;
+    }
+
+    .newMenu__container,
+    .plate__container{
+        height: 150vh;
+    }
+
+    .newMenu__container .contentBox .items{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .form__container .container .form{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .newItems__container .cards{
+        display: block;
+    }
+
+    .newItems__container .cards .card:nth-child(2){
+        margin: 5rem 0;
+    }
+
+    .feedback__container div{
+        width: 100%;
+    }
+
+    footer{
+        display: block;
+    }
+
+    footer .left{
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .right{
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+}

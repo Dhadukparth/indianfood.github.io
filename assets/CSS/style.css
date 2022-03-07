@@ -1,0 +1,622 @@
+@font-face {
+    font-family: "raleway";
+    src: url("../Fonts/Raleway/Raleway-VariableFont_wght.ttf");
+
+    font-family: "cookie";
+    src: url("../Fonts/Cookie/Cookie-Regular.ttf");
+
+}
+
+:root{
+    --menu-color: #dddfe1;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button{
+    display: none;
+}
+
+::placeholder{
+    color: var(--white);
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+    font-family: 'raleway';
+    scroll-behavior: smooth;
+}
+
+#toggleBtn,
+#closeBtn{
+    display: none;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.banner{
+    background-image: url("../Images/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: var(--menu-color);
+    font-family: 'raleway';
+    display: flex;
+    padding: 3rem 6rem;
+    justify-content: space-between;
+}
+
+.banner .navbar h2{
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner .navbar ul{
+    display: flex;
+}
+
+.banner .navbar ul li{
+    padding: 1rem 2rem;
+}
+
+.banner .navbar ul li a{
+    color: var(--menu-color);
+    font-size: 35px;
+}
+
+.banner .banner__text{
+    background-color: #d9dcdd;
+    width: 50vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .banner__text h2{
+    font-size: 100px;
+    letter-spacing: 5px;
+    font-family: 'cookie';
+    color: #2c3a42;
+}
+
+.banner .banner__text h1{
+    font-size: 90px;
+    letter-spacing: 3px;
+    color: #ad6c12;
+}
+
+.banner .banner__text button{
+    padding: 1rem 3rem;
+    background: white;
+    border: none;
+    margin: 1rem 0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.about__container{
+    padding: 6rem 15rem;
+    background-color: #2a3b40;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__container .about__text{
+    color: var(--white);
+    width: 45%;
+}
+
+.about__container .about__text h2{
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin: 2rem 0;
+}
+
+.about__container .about__text p{
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.task__container{
+    background-color: #d4d8d9;
+    padding: 6rem 15rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.task__container .box{
+    width: 20%;
+}
+
+.task__container .box .circle,
+.info__container .text .circle{
+    display: flex;
+    gap: 5px;
+}
+
+.task__container .box .circle .dot,
+.info__container .text .circle .dot{
+    background-color: #2a3b40;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.task__container .box h2{
+    padding: 1.5rem 0;
+}
+
+.task__container .box p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.plate__container{
+    background-image: url("../Images/background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.plate__container div{
+    background-color: #d9dcdd;
+}
+
+.plate__container .plate__text{
+    padding: 3rem;
+    text-align: center;
+}
+
+.plate__container .plate__text h2,
+.newMenu__container .contentBox .title h2,
+.form__container .container h2,
+.newItems__container .title h2{
+    font-family: 'cookie';
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.plate__container .plate__text h1,
+.newMenu__container .contentBox .title h1,
+.newItems__container .title h1{
+    color: #ad6c12;
+    font-size: 55px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.plate__container .plate__items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.plate__container .plate__items .box{
+    display: flex;
+}
+
+.plate__container .plate__items .box:nth-child(3),
+.plate__container .plate__items .box:nth-child(4){
+    flex-direction: row-reverse;
+}
+
+.plate__container .plate__items .box .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    padding: 0 3rem;
+}
+
+.plate__container .plate__items .box .text h3{
+    text-transform: uppercase;
+}
+
+.plate__container .plate__items .box .text p{
+    padding: 1rem 0;
+}
+
+.plate__container .plate__items .box .text span{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.info__container{
+    position: relative;
+    display: flex;
+    background-color: #d4d8d9;
+    justify-content: space-between;
+}
+
+.info__container .leftImage,
+.info__container .rightImage{
+    height: 100%;
+}
+
+.info__container .leftImage img,
+.info__container .rightImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.info__container .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+}
+
+.info__container .text h2{
+    padding: 1rem 0;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.info__container .text p{
+    font-size: 25px;
+    padding: 1rem 0;
+}
+
+.info__container .text .circle{
+    padding: 2rem;
+}
+
+.info__container .text .menu{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2rem;
+}
+
+.newMenu__container{
+    background-image: url("../Images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+.newMenu__container .contentBox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #d4d8d9;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    flex-direction: column;
+}
+
+.newMenu__container .contentBox .title{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+.newMenu__container .contentBox .items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+
+.newMenu__container .contentBox .items .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newMenu__container .contentBox .items .box .icon{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.newMenu__container .contentBox .items .box .text{
+    width: 60%;
+}
+
+.newMenu__container .contentBox .items .box .text h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.newMenu__container .contentBox .items .box .text p{
+    padding: 1rem 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.newMenu__container .contentBox .items .box .text p span{
+    font-weight: 700;
+}
+
+
+.form__container{
+    background-image: url("../Images/background3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+.form__container .container{
+    background: #2a3b40;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form__container .container h2{
+    color: var(--white);
+}
+
+.form__container .container .form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 15rem;
+    margin: 2rem 0;
+}
+
+.form__container .container .form .input{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__container .container .form .input label{
+    color: var(--white);
+    font-size: 20px;
+}
+
+.form__container .container .form .input select,
+.form__container .container .form .input input{
+    background: no-repeat;
+    border: 1px solid var(--white);
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    font-size: 20px;
+    color: var(--white);
+    outline: none;
+}
+
+.form__container .container .form .input select option{
+    color: var(--black);
+}
+
+.form__container .container button{
+    border: 1px solid var(--white);
+    background: none;
+    padding: 1rem 6rem;
+    margin: 1rem 0;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.set__images{
+    background-image: url("../Images/background4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    background-attachment: fixed;
+}
+
+.newItems__container{
+    background-color: #d4d8d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.newItems__container .title{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.newItems__container .title h2{
+    font-family: "cookie";
+    font-size: 60px;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+.newItems__container .cards{
+    display: flex;
+    gap: 0 5rem;
+    padding: 2rem 0;
+}
+
+.newItems__container .cards .card{
+    width: 450px;
+    height: auto;
+    background-color: var(--white);
+}
+
+.newItems__container .cards .card .image img{
+    width: 100%;
+}
+
+.newItems__container .cards .card .text{
+    padding: 2rem;
+}
+
+.newItems__container .cards .card .text span{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.newItems__container .cards .card .text h2{
+    padding-top: 2rem;
+    padding-bottom: .5rem;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.newItems__container .cards .card .text p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+}
+
+.newItems__container .cards .card .text a{
+    font-size: 25px;
+    border-bottom: 8px solid #ff992b;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.feedback__container{
+    background: #2a3b40;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feedback__container div{
+    text-align: center;
+    color: var(--white);
+    width: 50%;
+}
+
+.feedback__container div h1 i{
+    color: var(--white);
+    font-size: 55px;
+}
+
+.feedback__container div p{
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding: 1rem 0;
+}
+
+.feedback__container div h2{
+    font-size: 25px;
+    margin: 1.5rem 0;
+    letter-spacing: 2px;
+}
+
+.feedback__container div .socialMedia{
+    padding: 2rem 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.feedback__container div .socialMedia .circle{
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 50%;
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+footer{
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+}
+
+footer .left{
+    width: 20%;
+}
+
+footer .left h2,
+footer .right .box h2{
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+footer .left p{
+    padding-top: 2rem;
+    font-size: 20px;
+    text-align: justify;
+}
+
+footer .right{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .right .box .menu{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .right .box .menu a{
+    padding: 1rem 0;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
